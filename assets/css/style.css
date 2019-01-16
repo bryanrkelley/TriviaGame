@@ -1,0 +1,40 @@
+/*Background*/
+.bg {
+    /* The image used */
+    background-image: url("../images/Background.jpg");
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.jumbotron {
+    margin-bottom: .5vh;
+    padding-bottom: 2vh;
+    padding-top: .5vh;
+}
+
+.row {
+    padding: 1vh;
+}
+
+.hide {
+    display: none;
+}
+
+.gem {
+    height: 200px;
+    /* width: 200px; */
+    object-fit: cover;
+
+}
+
+.footer {
+    background: #333333;
+    color: white;
+    margin-top: 10px;
+    height: 5vh;
+    text-align: right;
+    padding: .5vh;
+}

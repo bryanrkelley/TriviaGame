@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Triva!</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- reset -->
     <link href="assets/css/reset.css" type="text/css" rel="stylesheet">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
     <!-- css -->
     <link href="assets/css/style.css" type="text/css" rel="stylesheet">
     <!-- jquery -->
@@ -17,12 +18,128 @@
 </head>
 
 <body>
+    <!--background-->
+    <!-- <div class="bg">
+
+        <div class="container-fluid text-center">
+            <div class="row">
+                <div class="col-sm-1"></div>
+
+                <div class="col-sm-10">
+                    <div class="jumbotron">
+                        <h1 class="display-4">Trivia Trivia!!!</h1>
+
+                        <p>Blah</p>=
+
+                        <a class="btn btn-primary btn-lg" href="https://bryanrkelley.github.io/Basic-Portfolio/" role="button"
+                            target="_blank">Main Page</a>
+                    </div>
+                </div>
+
+                <div class="col-sm-1"></div>
+            </div>
 
 
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <strong>Number to Guess: </strong> <span id="number-to-guess"></span>
+                            <p><strong>Current Count: </strong> <span id="counter"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card" id="crystalChoices">
+                        <div class="card-body">
+                            <strong>The Crystal Gems! </strong>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <a href="javascript:;"><img class="gem" src="assets/images/Garnet.png" id="Garnet"
+                                            alt="Garnet" title="Garnet"></a>
+                                </div>
+                                <div class="col-sm-3">
+                                    <a href="javascript:;"><img class="gem" src="assets/images/Amethyst.png" id="Amethyst"
+                                            alt="Amethyst" title="Amethyst"></a>
+                                </div>
+                                <div class="col-sm-3">
+                                    <a href="javascript:;"><img class="gem" src="assets/images/Pearl.png" id="Pearl"
+                                            alt="Pearl" title="Pearl"></a>
+                                </div>
+                                <div class="col-sm-3">
+                                    <a href="javascript:;"><img class="gem" src="assets/images/Steven.png" id="Steven"
+                                            alt="Steven Universe" title="Steven Universe"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <strong>Wins: </strong> <span id="wins">0</span>
+                            <p id="winner" style="display:none">Good Job! You saved the day! Press 'Enter/Return' to
+                                play
+                                again!</p>
+                        </div>
+                    </div>
+                </div>
 
-    <script src="assets/javascript/script.js"></script>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <strong>Losses: </strong> <span id="losses">0</span>
+                            <p id="loser" style="display:none">The Crystal Gems lost! Press 'Enter/Return' to play
+                                again!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-2"></div>
+
+                <div class="col-sm-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <button type="button" class="btn btn-primary btn-lg" id="reset">Reset</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-2"></div>
+            </div>
+        </div>
+    </div> -->
+
+    <div id="wrapper">
+        <h1>Trivia Triva</h1>
+        <div id="subwrapper">
+        <button id="start">Start</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Copyright 2019 - All rights reserved &copy;</p>
+    </footer>
+    <!-- Used for Bootstrap -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <script src="assets/javascript/app.js"></script>
 </body>
 
 </html>
