@@ -24,52 +24,52 @@ var questions = [{
     question: "Who is Mario, the famed mustachioed plumber, named after?",
     answers: ["Mario Segale", "Mario Biaggi", "Mario Lopez", "Mario Lanza"],
     correctAnswer: "Mario Segale",
-    image: "assets/images/...."
+    image: "assets/images/marioSegale.jpg"
 }, {
     question: "What was the first video game played in space?",
     answers: ["Kirby's Adventure", "Tetris", "Super Mario Bros.", "Dr. Mario"],
     correctAnswer: "Tetris",
-    image: "assets/images/...."
+    image: "assets/images/tetris.gif"
 }, {
     question: "When was Nintendo founded?",
-    answers: ["1962", "1977", "1981", "1989"],
-    correctAnswer: "1989",
-    image: "assets/images/...."
+    answers: ["1958", "1977", "1881", "1889"],
+    correctAnswer: "1889",
+    image: "assets/images/nintendo.gif"
 }, {
     question: "What is Kirby based off of?",
     answers: ["A Baku", "A Placeholder", "Pac Man", "A Piranha"],
     correctAnswer: "A Placeholder",
-    image: "assets/images/...."
+    image: "assets/images/kirby.gif"
 }, {
-    question: "Who is Nentendo's founder?",
+    question: "Who is Nintendo's founder?",
     answers: ["Kazumi Totaka", "Shuntaro Furukawa", "Fusajiro Yamuchi", "Koji Kondo"],
     correctAnswer: "Fusajiro Yamuchi",
-    image: "assets/images/...."
+    image: "assets/images/founder.jpg"
 }, {
     question: "What is the correct name of Nintendo's iconic handheld system?",
     answers: ["Gameboy", "Game Boy", "Game boy", "GameBoy"],
     correctAnswer: "Game Boy",
-    image: "assets/images/...."
+    image: "assets/images/gameBoy.gif"
 }, {
     question: "What is the name of Mario's original love interest?",
     answers: ["Petunia", "Peach", "Petra", "Pauline"],
     correctAnswer: "Pauline",
-    image: "assets/images/...."
+    image: "assets/images/pauline.gif"
 }, {
     question: "What was Mario's orginal name?",
     answers: ["Jump Man", "Mr.Video", "Mario", "Ossan"],
     correctAnswer: "Jump Man",
-    image: "assets/images/...."
+    image: "assets/images/marioJumping.gif"
 }, {
     question: "How old is Mario?",
     answers: ["30-31", "34-35", "24-25", "40-41"],
     correctAnswer: "24-25",
-    image: "assets/images/...."
+    image: "assets/images/shocked.gif"
 }, {
     question: "What was NES known as in Japan?",
     answers: ["EnterSys", "N1", "Famicom", "ENS"],
     correctAnswer: "Famicom",
-    image: "assets/images/...."
+    image: "assets/images/famicom.gif"
 }];
 
 //Overall Game Logic
@@ -107,6 +107,7 @@ var game = {
         game.unanswered++;
         $("#subwrapper").html("<h2>Out of time!</h2>");
         $("#subwrapper").append("<h3>The Correct Answer was: " + questions[game.currentQuestion].correctAnswer + ".</h3>");
+        $("#subwrapper").append("<img src=" + questions[game.currentQuestion].image + ">");
         if (game.currentQuestion == questions.length - 1) {
             setTimeout(game.results, 3 * 1000);
         } else {
@@ -133,9 +134,9 @@ var game = {
         console.log("Start!");
         $("#subwrapper").html("<h2> You got it right!</h2>");
         if (game.currentQuestion == questions.length - 1) {
-            setTimeout(game.results, 2.5 * 1000);
+            setTimeout(game.results, 3 * 1000);
         } else {
-            setTimeout(game.nextQuestion, 2.5 * 1000);
+            setTimeout(game.nextQuestion, 3 * 1000);
         }
     },
     answeredCorrectly: function () {
@@ -143,10 +144,11 @@ var game = {
         clearInterval(timer);
         game.correct++;
         $("#subwrapper").html("<h2> You got it right!</h2>");
+        $("#subwrapper").append("<img src=" + questions[game.currentQuestion].image + ">");
         if (game.currentQuestion == questions.length - 1) {
-            setTimeout(game.results, 2.5 * 1000);
+            setTimeout(game.results, 3 * 1000);
         } else {
-            setTimeout(game.nextQuestion, 2.5 * 1000);
+            setTimeout(game.nextQuestion, 3 * 1000);
         }
     },
     answeredIncorrectly: function () {
@@ -155,10 +157,11 @@ var game = {
         game.incorrect++;
         $("#subwrapper").html("<h2> You got it wrong!</h2>");
         $("#subwrapper").append("<h3>The Correct Answer was: " + questions[game.currentQuestion].correctAnswer + ".</h3>");
+        $("#subwrapper").append("<img src=" + questions[game.currentQuestion].image + ">");
         if (game.currentQuestion == questions.length - 1) {
-            setTimeout(game.results, 2.5 * 1000);
+            setTimeout(game.results, 3 * 1000);
         } else {
-            setTimeout(game.nextQuestion, 2.5 * 1000);
+            setTimeout(game.nextQuestion, 3 * 1000);
         }
     },
     reset: function () {
