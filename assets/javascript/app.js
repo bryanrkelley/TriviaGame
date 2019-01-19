@@ -131,13 +131,13 @@ var questions = [{
     image: "assets/images/...."
 }, {
     question: "????",
-    answers: ["?", "?", "?", "?"],
-    correctAnswer: "?",
+    answers: ["?", "x", "?", "?"],
+    correctAnswer: "x",
     image: "assets/images/...."
 }, {
     question: "????",
-    answers: ["?", "?", "?", "?"],
-    correctAnswer: "?",
+    answers: ["?", "?", "?", "z"],
+    correctAnswer: "z",
     image: "assets/images/...."
 }];
 
@@ -153,7 +153,7 @@ var game = {
         game.counter--;
         $("#counter").html(game.counter);
         if(game.counter<=0){
-            console.log("TTIME UP!");
+            console.log("TIME UP!");
             game.timeUp();
         }
     },
@@ -223,7 +223,7 @@ var game = {
     },
     reset: function(){
         game.currentQuestion = 0;
-        game.counter = 0;
+        game.counter = 30;
         game.correct = 0;
         game.incorrect = 0;
         game.unanswered = 0;
