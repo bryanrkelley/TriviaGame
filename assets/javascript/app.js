@@ -76,7 +76,7 @@ var questions = [{
 var game = {
     questions: questions,
     currentQuestion: 0,
-    counter: 30,
+    counter: 20,
     correct: 0,
     incorrect: 0,
     unanswered: 0,
@@ -90,14 +90,14 @@ var game = {
     },
     loadQuestion: function () {
         timer = setInterval(game.countdown, 1000);
-        $("#subwrapper").html("<h2> Time Remaining: <span id='counter'> 30 </span> Seconds</h2>");
+        $("#subwrapper").html("<h2> Time Remaining: <span id='counter'> 20 </span> Seconds</h2>");
         $("#subwrapper").append("<h2>" + questions[game.currentQuestion].question + "</h2>");
         for (var i = 0; i < questions[game.currentQuestion].answers.length; i++) {
             $("#subwrapper").append('<button class="answer-button" id="button-' + i + '" data-name="' + questions[game.currentQuestion].answers[i] + '">' + questions[game.currentQuestion].answers[i] + '</button>');
         }
     },
     nextQuestion: function () {
-        game.counter = 30;
+        game.counter = 20;
         $("#counter").html(game.counter);
         game.currentQuestion++;
         game.loadQuestion();
@@ -107,7 +107,7 @@ var game = {
         game.unanswered++;
         $("#subwrapper").html("<h2>Out of time!</h2>");
         $("#subwrapper").append("<h3>The Correct Answer was: " + questions[game.currentQuestion].correctAnswer + ".</h3>");
-        $("#subwrapper").append("<img src=" + questions[game.currentQuestion].image + ">");
+        $("#subwrapper").append("<img  class='icon' src=" + questions[game.currentQuestion].image + ">");
         if (game.currentQuestion == questions.length - 1) {
             setTimeout(game.results, 3 * 1000);
         } else {
@@ -144,7 +144,7 @@ var game = {
         clearInterval(timer);
         game.correct++;
         $("#subwrapper").html("<h2> You got it right!</h2>");
-        $("#subwrapper").append("<img src=" + questions[game.currentQuestion].image + ">");
+        $("#subwrapper").append("<img  class='icon' src=" + questions[game.currentQuestion].image + ">");
         if (game.currentQuestion == questions.length - 1) {
             setTimeout(game.results, 3 * 1000);
         } else {
@@ -157,7 +157,7 @@ var game = {
         game.incorrect++;
         $("#subwrapper").html("<h2> You got it wrong!</h2>");
         $("#subwrapper").append("<h3>The Correct Answer was: " + questions[game.currentQuestion].correctAnswer + ".</h3>");
-        $("#subwrapper").append("<img src=" + questions[game.currentQuestion].image + ">");
+        $("#subwrapper").append("<img  class='icon' src=" + questions[game.currentQuestion].image + ">");
         if (game.currentQuestion == questions.length - 1) {
             setTimeout(game.results, 3 * 1000);
         } else {
@@ -166,7 +166,7 @@ var game = {
     },
     reset: function () {
         game.currentQuestion = 0;
-        game.counter = 30;
+        game.counter = 20;
         game.correct = 0;
         game.incorrect = 0;
         game.unanswered = 0;
